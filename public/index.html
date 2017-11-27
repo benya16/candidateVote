@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vote">
+<head>
+    <title>Candidate Vote</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Candidate Vote</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#/vote">Vote <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#/admin">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container main-display">
+    <div ng-view></div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="javascript/app.js"></script>
+<script src="javascript/routes.js"></script>
+<script src="javascript/voteController.js"></script>
+<script src="javascript/adminController.js"></script>
+
+</body>
+</html>
