@@ -1,1 +1,8 @@
 <h2>This is the vote page.</h2>
+
+<div id="peopleDisplay">
+    <ul id="people">
+        <li class="person" ng-repeat="person in people"><input type="checkbox" ng-model="person.selected" id="{{ $index }}">{{ person.name }}</li>
+    </ul>
+    <button type="button" class="btn btn-primary" ng-click="submit()">Submit</button>
+</div>
