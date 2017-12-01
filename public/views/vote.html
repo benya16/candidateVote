@@ -1,8 +1,10 @@
-<h2>This is the vote page.</h2>
 
 <div id="peopleDisplay">
     <ul id="people">
-        <li class="person" ng-repeat="person in people"><input type="checkbox" ng-model="person.selected" id="{{ $index }}">{{ person.name }}</li>
+        <li class="person" ng-repeat="person in people | orderBy: '-vote'">
+            <input type="checkbox" ng-model="person.selected" id="{{ $index }}">
+            <span class="candidate">{{ person.name }}, Votes: {{ person.vote }}</span>
+        </li>
     </ul>
     <button type="button" class="btn btn-primary" ng-click="submit()">Submit</button>
 </div>

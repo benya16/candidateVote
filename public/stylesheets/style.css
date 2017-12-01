@@ -6,3 +6,7 @@
     list-style: none;
     padding: 0;
 }
+
+.candidate {
+    padding-left: 10px;
+}
